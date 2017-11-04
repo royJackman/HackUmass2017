@@ -1,0 +1,12 @@
+<Profile>
+  <ActionBar title="Profile">
+    <ActionItem text="Create" (tap)="create()" ios.position="right"></ActionItem>
+  </ActionBar>
+  <GridLayout>
+    <ProfileView [items]="profile">
+      <template let-item="item">
+        <Label [text]="item.firstName + ' ' item.lastname"></Label>
+      </template>
+    </ProfileView>
+  </GridLayout>
+</Profile>
